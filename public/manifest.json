@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "focus",
+  "description" : "Stay focused when you need to be productive",
+  "version": "1.0.0",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["storage"],
+  "host_permissions": ["<all_urls>"]
+}
