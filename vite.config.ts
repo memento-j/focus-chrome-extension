@@ -11,4 +11,18 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    emptyOutDir: true,
+    rollupOptions: {
+      input: {
+        index: path.resolve(__dirname, "index.html"),
+        background: path.resolve(__dirname, "src/background.ts"),
+      },
+      output: {
+        entryFileNames: "[name].js",
+        chunkFileNames: "assets/[name]-[hash].js",
+        assetFileNames: "assets/[name]-[hash][extname]"
+      }
+    }
+  }
 })
