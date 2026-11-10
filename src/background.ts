@@ -16,7 +16,7 @@ chrome.tabs.onUpdated.addListener(async (tabId, changeInfo, tab) => {
         for (const url of storedUrls) {
             if (tab.url.includes(url)) {
                 await chrome.tabs.update(tabId, {
-                    url: "https://www.google.com"
+                    url: "https://neetcode.io/roadmap"
                 });
             }
         }
